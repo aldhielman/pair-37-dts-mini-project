@@ -1,0 +1,20 @@
+.header {
+  background-color: #141414;
+  padding: 15px 0;
+}
+
+.header .left {
+  display: flex;
+  align-items: center;
+  gap: 13rem;
+}
+
+.header .left span {
+  font-size: 14px;
+  color: #ffffff;
+  margin-right: 12px;
+}
+
+.logo img {
+  width: 36px;
+}
