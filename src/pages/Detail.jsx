@@ -1,9 +1,12 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React from "react";
+import { useParams } from "react-router-dom";
+import Nav from "../components/Nav";
 
 export default function Detail() {
-    let params = useParams()
+  let params = useParams();
   return (
-    <div>Detail {params.id}</div>
-  )
+    <>
+      <Nav />
+    </>
+  );
 }

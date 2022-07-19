@@ -9,7 +9,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -31,7 +31,7 @@ function App() {
         <Route
           path="/detail/:id"
           element={
-            <ProtectedRoute loginOnly={true}>
+            <ProtectedRoute>
               <Detail />
             </ProtectedRoute>
           }
