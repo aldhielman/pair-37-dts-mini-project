@@ -1,13 +1,14 @@
-import { signOut } from 'firebase/auth'
-import React from 'react'
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { useNavigate } from 'react-router-dom'
-import Banner from '../components/Banner'
-import Footer from '../components/Footer'
-import Nav from '../components/Nav'
-import Row from '../components/Row'
-import { auth } from '../config/firebase'
-import requests from '../utils/request'
+import ResponsiveAppBar from "../components/ResponsiveAppBar";
+import { signOut } from "firebase/auth";
+import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+import Row from "../components/Row";
+import { auth } from "../config/firebase";
+import requests from "../utils/request";
 
 export default function Home() {
   // const [user] = useAuthState(auth);
@@ -22,6 +23,7 @@ export default function Home() {
   // }
   return (
     <>
+      {/* <ResponsiveAppBar /> */}
       <Nav />
       <Banner />
       <Row
@@ -35,8 +37,7 @@ export default function Home() {
       <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Footer/>
+      <Footer />
     </>
-
-  )
+  );
 }

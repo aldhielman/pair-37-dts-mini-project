@@ -22,13 +22,6 @@ function Nav() {
         src="https://fontmeme.com/permalink/200807/89ced72bb8fcd7fd4ff473f94bf82dd6.png"
         alt="Netflix Logo"
       />
-      <div className="nav__menu">
-        <p>Home</p>
-        <p>Scenes</p>
-        <p>Movies</p>
-        <p>New and Popular</p>
-        <p>My List</p>
-      </div>
       <img
         className="nav__avatar"
         src="https://secure.gravatar.com/avatar/aa787139834b2c1f169f95e60062b222?s=100&d=retro&r=g"

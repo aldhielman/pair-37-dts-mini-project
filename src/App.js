@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -17,6 +18,14 @@ function App() {
           element={
             <ProtectedRoute loginOnly={false}>
               <Register />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute loginOnly={false}>
+              <Profile />
             </ProtectedRoute>
           }
         />

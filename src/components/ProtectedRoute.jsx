@@ -2,6 +2,7 @@ import React from "react";
 import { auth } from "../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate } from "react-router-dom";
+import { LinearProgress } from "@mui/material";
 
 export default function ProtectedRoute({ children, loginOnly = true }) {
   const [user, loading, error] = useAuthState(auth);
@@ -9,7 +10,7 @@ export default function ProtectedRoute({ children, loginOnly = true }) {
   if (loading) {
     return (
       <div>
-        <p>Loading...</p>
+        <LinearProgress />
       </div>
     );
   }
