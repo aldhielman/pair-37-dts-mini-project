@@ -10,9 +10,9 @@ function Banner() {
   const navigate = useNavigate();
 
   async function fetchData() {
-    const request = await axios.get(requests.fetchNetflixOriginals);
+    const request = await axios.get(requests.fetchTrending);
 
-    console.log(request.data)
+    console.log(request.data);
     setMovie(
       request.data.results[
         Math.floor(Math.random() * request.data.results.length - 1)
@@ -21,10 +21,14 @@ function Banner() {
     return request;
   }
 
+  const handleOnclick = () => {
+    // console.log(movie);
+    navigate(`/detail/${movie.id}`);
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
-
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
@@ -44,7 +48,9 @@ function Banner() {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner__buttons">
-          <button className="banner__button">Play</button>
+          <button className="banner__button" onClick={handleOnclick}>
+            Play
+          </button>
           <button className="banner__button">My List</button>
         </div>
         <h1 className="banner__description">

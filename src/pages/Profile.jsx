@@ -11,36 +11,38 @@ import { Link } from "react-router-dom";
 export default function Profile() {
   return (
     <div className="profile">
-      <img className="profile__app-logo" src={appLogo} />
+      <Link to="/">
+        <img className="profile__app-logo" src={appLogo} alt="avatar" />
+      </Link>
       <h1 className="profile__title">Who's watching ?</h1>
       <div className="profile__avatar-wrapper">
         <Link to="/login" style={{ textDecoration: "none" }}>
           <div className="profile__avatar-card">
-            <img src={profile1} />
+            <img src={profile1} alt="avatar" />
             <span>Agus</span>
           </div>
         </Link>
         <Link to="/login" style={{ textDecoration: "none" }}>
           <div className="profile__avatar-card">
-            <img src={profile2} />
+            <img src={profile2} alt="avatar" />
             <span>Budi</span>
           </div>
         </Link>
         <Link to="/login" style={{ textDecoration: "none" }}>
           <div className="profile__avatar-card">
-            <img src={profile3} />
+            <img src={profile3} alt="avatar" />
             <span>Chika</span>
           </div>
         </Link>
         <Link to="/login" style={{ textDecoration: "none" }}>
           <div className="profile__avatar-card">
-            <img src={profile4} />
+            <img src={profile4} alt="avatar" />
             <span>Dino</span>
           </div>
         </Link>
 
         <div className="profile__avatar-card">
-          <img src={more} />
+          <img src={more} alt="avatar" />
           <span>Other</span>
         </div>
       </div>

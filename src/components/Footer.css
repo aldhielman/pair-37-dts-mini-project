@@ -1,20 +1,22 @@
-.footer{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "inter";
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 278px;
+  color: #808080;
+  font-size: 13px;
 }
 
-
-.footer__menu{
-    display: flex;
+.column-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.footer button{
-    align-self: flex-start;
-}
-
-li{
-    list-style: none;
+.btn-service {
+  width: 133px;
+  background-color: transparent;
+  border: 1px solid #808080;
+  color: #808080;
+  padding: 10px 0;
+  cursor: pointer;
 }
